@@ -1,58 +1,39 @@
 # test-octane-component-colocation
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Showing "basic" component colocation is working properly.
 
-## Prerequisites
+This repo is:
 
-You will need the following things properly installed on your computer.
+```
+ember new test-octane-component-colocation --yarn
+cd test-octane-component-colocation
+ember generate component hello
+ember generate component-class hello
+```
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+Tweaked the implementation to have _some_ functionality, fixed the test.
 
-## Installation
+```
+❯ ember test
+DEPRECATION: ember-cli-htmlbars-inline-precompile is no longer needed with ember-cli-htmlbars versions 4.0.0 and higher, please remove it from `/private/tmp/test-octane-component-colocation/package.json`
+Environment: test
+cleaning up...
+Built project successfully. Stored in "/var/folders/mt/yt2qjpl93ls98lrkrs81rzch000pzv/T/tests-dist-2019919-52400-1aa34cu.zvj4".
+ok 1 Chrome 77.0 - [94 ms] - Integration | Component | hello: it renders
+ok 2 Chrome 77.0 - [1 ms] - ESLint | app: app.js
+ok 3 Chrome 77.0 - [0 ms] - ESLint | app: components/hello.js
+ok 4 Chrome 77.0 - [0 ms] - ESLint | app: resolver.js
+ok 5 Chrome 77.0 - [0 ms] - ESLint | app: router.js
+ok 6 Chrome 77.0 - [0 ms] - TemplateLint: test-octane-component-colocation/templates/application.hbs
+ok 7 Chrome 77.0 - [1 ms] - ESLint | tests: integration/components/hello-test.js
+ok 8 Chrome 77.0 - [0 ms] - ESLint | tests: test-helper.js
+ok 9 Chrome 77.0 - [0 ms] - ember-qunit: Ember.onerror validation: Ember.onerror is functioning properly
 
-* `git clone <repository-url>` this repository
-* `cd test-octane-component-colocation`
-* `yarn install`
+1..9
+# tests 9
+# pass  9
+# skip  0
+# fail  0
 
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+# ok
+```
